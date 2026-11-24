@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+.vscode/
+.DS_Store
+books.db
+books.db-shm
+books.db-wal
+books.db-journal
