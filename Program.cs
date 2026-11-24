@@ -77,7 +77,7 @@ static void ShowBooks(BookContext db)
         return;
     }
 
-    foreach (Book book in books)
+    foreach (Book book in books) // SELECT FROM * ...
     {
         Console.WriteLine($"ID: {book.Id} | Title: {book.Title} | Author: {book.Author} | Price: {book.Price}");
     }
@@ -116,7 +116,7 @@ static void EditBook(BookContext db)
     book.Title = title;
     book.Author = author;
     book.Price = price;
-    db.SaveChanges();
+    db.SaveChanges(); // UPDATE 
     Console.WriteLine("Book updated.");
 }
 
@@ -137,7 +137,7 @@ static void DeleteBook(BookContext db)
         return;
     }
 
-    db.Books.Remove(book);
+    db.Books.Remove(book); //DELETE
     db.SaveChanges();
     Console.WriteLine("Book deleted.");
 }
